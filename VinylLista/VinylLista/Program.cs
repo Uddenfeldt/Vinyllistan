@@ -99,6 +99,7 @@ namespace Vinyllistan
         }
         static void Remove()
         {
+            Console.Clear();
             Console.WriteLine("Ta bort ALbum");
             string nameToRemove = Console.ReadLine();
             for (int i = 0; i < album.Length; i++)
