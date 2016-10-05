@@ -89,7 +89,7 @@ namespace Vinyllistan
 
             for (int i = 0; i < artist.Length; i++)
             {
-                if (artist[i].ToLower() == null)
+                if (artist[i] == null)
                 {
                     artist[i] = artistNamn;
                     album[i] = albumNamn;
@@ -105,7 +105,7 @@ namespace Vinyllistan
             string nameToRemove = Console.ReadLine();
             for (int i = 0; i < album.Length; i++)
             {
-                if (album[i].ToLower() == nameToRemove)
+                if (album[i] != null && album[i].ToLower() == nameToRemove)
                 {
                     artist[i] = null;
                     album[i] = null;
