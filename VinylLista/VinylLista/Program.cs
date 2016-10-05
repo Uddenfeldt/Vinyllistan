@@ -30,9 +30,10 @@ namespace Vinyllistan
                 Console.Clear();
                 Console.WriteLine("Välj alternativ:");
                 Console.WriteLine("1. Lägg till");
-                Console.WriteLine("2.Ta bort");
+                Console.WriteLine("2. Ta bort");
                 Console.WriteLine("3. Ändra");
                 Console.WriteLine("4. Visa lista");
+                Console.WriteLine("5. Hejdå");
                 mainMenuSwitch = int.Parse(Console.ReadLine());
                 switch (mainMenuSwitch)
                 {
@@ -51,6 +52,9 @@ namespace Vinyllistan
                         Console.Clear();
                         visaKod();
 
+                        break;
+                    case 5:
+                        Environment.Exit(0);
                         break;
                 }
             }
