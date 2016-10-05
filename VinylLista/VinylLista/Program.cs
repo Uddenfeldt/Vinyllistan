@@ -64,6 +64,8 @@ namespace Vinyllistan
 
         private static void visaKod()
         {
+            Console.WriteLine("Artist Album Årtal ");
+            Console.WriteLine("");
             for (int i = 0; i < artist.Length; i++)
             {
                 Console.Write(artist[i] + " ");
