@@ -89,7 +89,7 @@ namespace Vinyllistan
 
             for (int i = 0; i < artist.Length; i++)
             {
-                if (artist[i] == null)
+                if (artist[i].ToLower() == null)
                 {
                     artist[i] = artistNamn;
                     album[i] = albumNamn;
@@ -129,7 +129,7 @@ namespace Vinyllistan
             int yearName = int.Parse(Console.ReadLine());
             for (int i = 0; i < album.Length; i++)
             {
-                if (album[i] == albumToEdit)
+                if (album[i].ToLower() == albumToEdit)
                 {
                     artist[i] = artistNamn;
                     album[i] = albumNamn;
