@@ -123,11 +123,11 @@ namespace Vinyllistan
             Console.Clear();
             Console.WriteLine("Vilket album vill du ändra på? ");
            string albumToEdit = Console.ReadLine();
-            Console.WriteLine("Ändra Album");
+            Console.WriteLine("Vad ska det nya Albumet heta?");
             string albumNamn = Console.ReadLine();
-            Console.WriteLine("Ändra Artist");
+            Console.WriteLine("Vad heter Artisten");
             string artistNamn = Console.ReadLine();
-            Console.WriteLine("Ändra årtal");
+            Console.WriteLine("Vilket årtal?");
             int yearName = int.Parse(Console.ReadLine());
             for (int i = 0; i < album.Length; i++)
             {
