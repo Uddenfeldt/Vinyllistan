@@ -105,7 +105,7 @@ namespace Vinyllistan
             string nameToRemove = Console.ReadLine();
             for (int i = 0; i < album.Length; i++)
             {
-                if (album[i] == nameToRemove)
+                if (album[i].ToLower() == nameToRemove)
                 {
                     artist[i] = null;
                     album[i] = null;
