@@ -14,37 +14,46 @@ namespace Vinyllistan
 
         static void Main(string[] args)
         {
-
+            
             artist[0] = "Velvet revolver";
             artist[1] = "Britney spears";
             artist[2] = "Maroon 5";
             album[0] = "Danskebank";
             årtal[0] = 1970;
+            album[1] = "tjoho";
+            årtal[1] = 1969;
+            album[2] = "tudilu";
+            årtal[2] = 1980;
             int mainMenuSwitch;
-            Console.WriteLine("Välj alternativ:");
-            Console.WriteLine("1. Lägg till");
-            Console.WriteLine("2.Ta bort");
-            Console.WriteLine("3. Ändra");
-            Console.WriteLine("4. Visa lista");
-            mainMenuSwitch = int.Parse(Console.ReadLine());
-            switch (mainMenuSwitch)
+            while (true)
             {
-                case 1:
-                    Add();
-                    break;
-                case 2:
-                    Remove();
-                    break;
-                default:
-                    break;
-                case 3:
-                    //Change();
-                    break;
-                case 4:
-                    visaKod();
-                    break;
-            }
+                Console.Clear();
+                Console.WriteLine("Välj alternativ:");
+                Console.WriteLine("1. Lägg till");
+                Console.WriteLine("2.Ta bort");
+                Console.WriteLine("3. Ändra");
+                Console.WriteLine("4. Visa lista");
+                mainMenuSwitch = int.Parse(Console.ReadLine());
+                switch (mainMenuSwitch)
+                {
+                    case 1:
+                        Add();
+                        break;
+                    case 2:
+                        Remove();
+                        break;
+                    default:
+                        break;
+                    case 3:
+                        Change();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        visaKod();
 
+                        break;
+                }
+            }
 
 
         }
@@ -55,10 +64,10 @@ namespace Vinyllistan
             {
                 Console.Write(artist[i] + " ");
 
-                Console.WriteLine(album[i] + " ");
+                Console.Write(album[i] + " ");
                 if (årtal[i] != 0)
                 {
-                    Console.Write(årtal[i] + " ");
+                    Console.WriteLine(årtal[i] + " ");
                 }
             }
             Console.ReadLine();
@@ -97,10 +106,33 @@ namespace Vinyllistan
 
                     årtal[i] = 0;
                 }
+               
 
             }
-
         }
+        static void Change()
+        {
+        
+            Console.WriteLine("Vilket album vill du ändra på? ");
+           string albumToEdit = Console.ReadLine();
+            Console.WriteLine("Ändra Album");
+            string albumNamn = Console.ReadLine();
+            Console.WriteLine("Ändra Artist");
+            string artistNamn = Console.ReadLine();
+            Console.WriteLine("Ändra årtal");
+            int yearName = int.Parse(Console.ReadLine());
+            for (int i = 0; i < album.Length; i++)
+            {
+                if (album[i] == albumToEdit)
+                {
+                    artist[i] = artistNamn;
+                    album[i] = albumNamn;
+                    årtal[i] = yearName;
+
+                }
+            }
+        }
+
 
     }
 }
