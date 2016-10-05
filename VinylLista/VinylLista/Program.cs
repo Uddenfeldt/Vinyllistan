@@ -79,6 +79,7 @@ namespace Vinyllistan
 
         static void Add()
         {
+            Console.Clear();
             Console.WriteLine("Mata in Artist");
             string artistNamn = Console.ReadLine();
             Console.WriteLine("Mata in Album");
@@ -117,7 +118,7 @@ namespace Vinyllistan
         }
         static void Change()
         {
-        
+            Console.Clear();
             Console.WriteLine("Vilket album vill du ändra på? ");
            string albumToEdit = Console.ReadLine();
             Console.WriteLine("Ändra Album");
